@@ -5,11 +5,11 @@ function rotateClockHands() {
     const secondHand = document.querySelector('.second-hand');
 
     const now = new Date();
-    const hours = now.getHours() % 12; // Convert to 12-hour format
+    const hours = now.getHours() % 24; // Convert to 12-hour format
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
     
-    const hourDegrees = (360 / 12) * hours + (360 / 12) * (minutes / 60);
+    const hourDegrees = (360 / 24) * hours + (360 /24) * (minutes / 60);
     const minuteDegrees = (360 / 60) * minutes + (360 / 60) * (seconds / 60);
     const secondDegrees = (360 / 60) * seconds;
 
